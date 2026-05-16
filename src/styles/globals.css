@@ -1,0 +1,245 @@
+/* ═══════════════════════════════════════════════════════════
+   LYRICRAFT — Neo-Brutalist Global Design System
+   design.md tokens applied globally
+═══════════════════════════════════════════════════════════ */
+
+:root {
+  --color-teal:    #00C2CB;
+  --color-magenta: #FF00FF;
+  --color-yellow:  #FFF700;
+  --color-black:   #000000;
+  --color-white:   #FFFFFF;
+  --color-beige:   #F5F5DC;
+
+  --border:        3px solid #000000;
+  --shadow-1:      4px 4px 0px #000000;
+  --shadow-2:      12px 12px 0px #000000;
+  --radius:        0px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-beige);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--color-black);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--color-beige); border-left: 2px solid #000; }
+::-webkit-scrollbar-thumb { background: #000; }
+
+/* ── Buttons ── */
+.btn {
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  transition: box-shadow 0.08s ease-out, transform 0.08s ease-out;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.btn:hover  { box-shadow: 8px 8px 0px #000; transform: translate(-2px, -2px); }
+.btn:active { box-shadow: none; transform: translate(4px, 4px); }
+.btn:focus-visible { outline: 3px solid var(--color-yellow); outline-offset: 2px; }
+
+.btn-primary  { background: var(--color-teal);    color: #000; }
+.btn-yellow   { background: var(--color-yellow);  color: #000; }
+.btn-danger   { background: var(--color-magenta); color: #000; }
+.btn-outline  { background: transparent;          color: #000; }
+.btn-white    { background: var(--color-white);   color: #000; }
+.btn-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+/* ── Inputs ── */
+input,
+textarea,
+select {
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-size: 15px;
+  background: var(--color-white);
+  outline: none;
+  font-family: 'IBM Plex Mono', monospace;
+  width: 100%;
+  color: #000;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid var(--color-yellow);
+  outline-offset: 2px;
+}
+input.error,
+textarea.error,
+select.error {
+  border-color: var(--color-magenta);
+}
+
+/* ── Card ── */
+.card {
+  border: var(--border);
+  box-shadow: var(--shadow-2);
+  background: var(--color-white);
+  border-radius: var(--radius);
+}
+
+/* ── Panel Header ── */
+.panel-header {
+  background: #000;
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ── Step Badge ── */
+.step-badge {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 13px;
+  flex-shrink: 0;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.step-active { background: var(--color-yellow); }
+.step-done   { background: #000; color: #fff; }
+.step-idle   { background: var(--color-beige); }
+
+/* ── Tags / Badges ── */
+.tag {
+  display: inline-block;
+  border: 2px solid #000;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: default;
+}
+.tag-teal    { background: var(--color-teal); }
+.tag-yellow  { background: var(--color-yellow); }
+.tag-magenta { background: var(--color-magenta); }
+
+/* ── Preset Cards ── */
+.preset-card {
+  border: 3px solid #000;
+  cursor: pointer;
+  transition: box-shadow 0.08s ease-out, transform 0.08s ease-out;
+  box-shadow: 4px 4px 0px #000;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+.preset-card:hover   { box-shadow: 10px 10px 0px #000; transform: translate(-2px, -2px); }
+.preset-card.selected { outline: 4px solid var(--color-yellow); outline-offset: 0px; }
+
+/* ── Lyric Lines ── */
+.lyric-line {
+  border-bottom: 2px solid #000;
+  padding: 8px 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.08s;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.lyric-line:first-child { border-top: 2px solid #000; }
+.lyric-line:hover  { background: var(--color-yellow); }
+.lyric-line.active { background: var(--color-teal); border-color: #000; }
+
+/* ── Progress Bar ── */
+.progress-bar {
+  border: var(--border);
+  height: 24px;
+  background: var(--color-beige);
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--color-teal);
+  transition: width 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ── Divider ── */
+.divider {
+  height: 3px;
+  background: #000;
+  width: 100%;
+}
+
+/* ── Keyframes ── */
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1;    }
+  92%       { opacity: 1;    }
+  93%       { opacity: 0.85; }
+  94%       { opacity: 1;    }
+  97%       { opacity: 0.9;  }
+  98%       { opacity: 1;    }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 40px #00ff41; }
+  50%       { text-shadow: 0 0 6px  #00ff41, 0 0 12px #00ff41, 0 0 24px #00ff41; }
+}
+
+@keyframes reveal-up {
+  0%   { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
