@@ -1,15 +1,15 @@
 import { useState, useRef, useEffect } from "react";
-import "../styles/globals.css";
+import "./styles/globals.css";
 
-import { T, STEPS } from "../styles/tokens.js";
-import StepIndicator  from "../components/StepIndicator.jsx";
-import Toast          from "../components/Toast.jsx";
-import SongSearch     from "../components/SongSearch.jsx";
-import AudioUpload    from "../components/AudioUpload.jsx";
-import LyricSync      from "../components/LyricSync.jsx";
-import PresetSelector from "../components/PresetSelector.jsx";
-import ExportPanel    from "../components/ExportPanel.jsx";
-import PreviewSidebar from "../components/PreviewSidebar.jsx";
+import { T, STEPS } from "./styles/tokens.js";
+import StepIndicator  from "./components/StepIndicator.jsx";
+import Toast          from "./components/Toast.jsx";
+import SongSearch     from "./components/SongSearch.jsx";
+import AudioUpload    from "./components/AudioUpload.jsx";
+import LyricSync      from "./components/LyricSync.jsx";
+import PresetSelector from "./components/PresetSelector.jsx";
+import ExportPanel    from "./components/ExportPanel.jsx";
+import PreviewSidebar from "./components/PreviewSidebar.jsx";
 
 export default function App() {
   // ── Workflow state ──
