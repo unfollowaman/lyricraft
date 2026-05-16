@@ -3,9 +3,9 @@ name: Deploy LYRICRAFT to GitHub Pages
 on:
   push:
     branches:
-      - main   # Runs every time you push to main
+      - main
 
-  workflow_dispatch:   # Also allows manual trigger from GitHub UI
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -28,10 +28,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --no-package-lock
 
       - name: Build with Vite
         run: npm run build
