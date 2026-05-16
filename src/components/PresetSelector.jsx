@@ -1,6 +1,7 @@
 import Panel from "./Panel.jsx";
 import PresetMiniPreview from "./PresetMiniPreview.jsx";
-import { PRESETS, FONTS } from "../data/presets.js";
+import { PRESETS } from "../data/presets.js";
+import { FONTS } from "../styles/tokens.js";
 
 export default function PresetSelector({ selectedPreset, selectedFont, onPresetChange, onFontChange, onComplete }) {
   return (
