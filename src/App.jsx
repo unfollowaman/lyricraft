@@ -22,7 +22,7 @@ export default function App() {
   const [isPlaying,    setIsPlaying]    = useState(false);
   const [currentLine,  setCurrentLine]  = useState(0);
   const [selectedPreset, setSelectedPreset] = useState("crt-mono");
-  const [selectedFont,   setSelectedFont]   = useState("IBM Plex Mono");
+  const [selectedFont,   setSelectedFont]   = useState("Vidaloka");
   const [notification,   setNotification]   = useState(null);
 
   const audioRef = useRef(null);
@@ -100,14 +100,14 @@ export default function App() {
         position: "sticky", top: 0, zIndex: 100,
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 26, letterSpacing: 4, color: T.teal }}>
+          <span style={{ fontFamily: "'Vidaloka', serif", fontSize: 26, letterSpacing: 4, color: T.teal }}>
             LYRICRAFT
           </span>
           <span style={{
             background: T.yellow, color: "#000",
             padding: "2px 8px", fontSize: 10, fontWeight: 900,
             letterSpacing: 1, border: "2px solid #fff",
-            fontFamily: "'IBM Plex Mono', monospace",
+            fontFamily: "'Vidaloka', serif",
           }}>BETA</span>
         </div>
         <nav style={{ display: "flex", gap: 8 }}>
@@ -125,7 +125,7 @@ export default function App() {
       }}>
         <div>
           <h1 style={{
-            fontFamily: "'Bebas Neue', sans-serif",
+            fontFamily: "'Vidaloka', serif",
             fontSize: "clamp(32px, 5vw, 52px)",
             letterSpacing: 3, lineHeight: 1, marginBottom: 8,
           }}>
@@ -133,7 +133,7 @@ export default function App() {
             <span style={{ color: T.teal }}>LYRIC MOTION</span>{" "}
             <span style={{ color: T.yellow }}>GENERATOR</span>
           </h1>
-          <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 13, color: "#aaa", maxWidth: 480, lineHeight: 1.6 }}>
+          <p style={{ fontFamily: "'Vidaloka', serif", fontSize: 13, color: "#aaa", maxWidth: 480, lineHeight: 1.6 }}>
             Browser-native. No upload limits. No watermarks.<br />
             Premium cinematic typography — exported locally.
           </p>
@@ -214,10 +214,10 @@ export default function App() {
         background: "#000", color: "#555",
         padding: "20px 32px",
         display: "flex", justifyContent: "space-between", alignItems: "center",
-        fontFamily: "'IBM Plex Mono', monospace", fontSize: 11,
+        fontFamily: "'Vidaloka', serif", fontSize: 11,
         marginTop: 32, flexWrap: "wrap", gap: 8,
       }}>
-        <span style={{ color: T.teal, fontFamily: "'Bebas Neue', sans-serif", fontSize: 18, letterSpacing: 3 }}>
+        <span style={{ color: T.teal, fontFamily: "'Vidaloka', serif", fontSize: 18, letterSpacing: 3 }}>
           LYRICRAFT
         </span>
         <span>BROWSER-NATIVE · CANVAS + FFMPEG WASM · NO SERVERS</span>

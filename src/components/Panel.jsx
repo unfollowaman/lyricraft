@@ -23,7 +23,7 @@ export default function Panel({ label, badge, accent, children }) {
               fontWeight: 900,
               letterSpacing: 1,
               border: "2px solid #fff",
-              fontFamily: "'IBM Plex Mono', monospace",
+              fontFamily: "'Vidaloka', serif",
             }}
           >
             {badge}

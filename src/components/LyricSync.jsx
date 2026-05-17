@@ -9,7 +9,7 @@ import Panel from "./Panel.jsx";
 export default function LyricSync({ lyrics, duration, onComplete }) {
   return (
     <Panel label="03 // LYRIC SYNC" badge="AI-ASSISTED">
-      <p style={{ fontSize: 13, color: "#555", marginBottom: 16, fontFamily: "'IBM Plex Mono', monospace" }}>
+      <p style={{ fontSize: 13, color: "#555", marginBottom: 16, fontFamily: "'Vidaloka', serif" }}>
         Lyrics are auto-synced to your audio. Click any line to preview and manually adjust timing.
       </p>
 
@@ -24,10 +24,10 @@ export default function LyricSync({ lyrics, duration, onComplete }) {
             key={label}
             style={{ border: "3px solid #000", background: bg, padding: "12px 16px" }}
           >
-            <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'IBM Plex Mono', monospace", marginBottom: 4 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'Vidaloka', serif", marginBottom: 4 }}>
               {label}
             </div>
-            <div style={{ fontSize: 20, fontWeight: 900, fontFamily: "'Bebas Neue', sans-serif", letterSpacing: 2 }}>
+            <div style={{ fontSize: 20, fontWeight: 900, fontFamily: "'Vidaloka', serif", letterSpacing: 2 }}>
               {val}
             </div>
           </div>

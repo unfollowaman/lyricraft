@@ -30,7 +30,7 @@ export default function PreviewSidebar({ lyrics, currentLine, isPlaying, onLineC
               flexDirection: "column", gap: 8,
             }}>
               <div style={{ fontSize: 28, color: "#333" }}>◻</div>
-              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: "#444", textAlign: "center" }}>
+              <div style={{ fontFamily: "'Vidaloka', serif", fontSize: 11, color: "#444", textAlign: "center" }}>
                 FETCH LYRICS TO<br />ENABLE PREVIEW
               </div>
             </div>
@@ -39,7 +39,7 @@ export default function PreviewSidebar({ lyrics, currentLine, isPlaying, onLineC
 
         {/* Playback controls */}
         <div style={{ padding: "12px 16px", background: "#111", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: "#666" }}>
+          <span style={{ fontFamily: "'Vidaloka', serif", fontSize: 11, color: "#666" }}>
             CRT MONO · 9:16 · 30fps
           </span>
           <div style={{ display: "flex", gap: 6 }}>
@@ -86,10 +86,10 @@ export default function PreviewSidebar({ lyrics, currentLine, isPlaying, onLineC
                   transition: "background 0.08s",
                 }}
               >
-                <span style={{ fontSize: 10, color: i === currentLine ? "#000" : "#888", fontFamily: "'IBM Plex Mono', monospace", minWidth: 28 }}>
+                <span style={{ fontSize: 10, color: i === currentLine ? "#000" : "#888", fontFamily: "'Vidaloka', serif", minWidth: 28 }}>
                   {i + 1}
                 </span>
-                <span style={{ fontSize: 12, fontFamily: "'IBM Plex Mono', monospace", fontWeight: i === currentLine ? 700 : 400, color: i === currentLine ? "#000" : "#333" }}>
+                <span style={{ fontSize: 12, fontFamily: "'Vidaloka', serif", fontWeight: i === currentLine ? 700 : 400, color: i === currentLine ? "#000" : "#333" }}>
                   {l.text}
                 </span>
               </div>
@@ -100,7 +100,7 @@ export default function PreviewSidebar({ lyrics, currentLine, isPlaying, onLineC
 
       {/* Keyboard shortcuts */}
       <div style={{ border: "3px solid #000", background: "#000", padding: "12px 16px" }}>
-        <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, marginBottom: 10, color: "#555", fontFamily: "'IBM Plex Mono', monospace" }}>
+        <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, marginBottom: 10, color: "#555", fontFamily: "'Vidaloka', serif" }}>
           KEYBOARD
         </div>
         {[
@@ -109,7 +109,7 @@ export default function PreviewSidebar({ lyrics, currentLine, isPlaying, onLineC
           ["R",     "Re-sync"],
           ["E",     "Export"],
         ].map(([key, desc]) => (
-          <div key={key} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6, fontFamily: "'IBM Plex Mono', monospace" }}>
+          <div key={key} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6, fontFamily: "'Vidaloka', serif" }}>
             <span style={{ background: "#222", color: "#fff", padding: "2px 8px", fontSize: 10, border: "1px solid #444" }}>{key}</span>
             <span style={{ fontSize: 11, color: "#666" }}>{desc}</span>
           </div>

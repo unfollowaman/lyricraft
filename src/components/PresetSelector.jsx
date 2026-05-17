@@ -6,7 +6,7 @@ import { FONTS } from "../styles/tokens.js";
 export default function PresetSelector({ selectedPreset, selectedFont, onPresetChange, onFontChange, onComplete }) {
   return (
     <Panel label="04 // MOTION PRESET" badge="CINEMATIC">
-      <p style={{ fontSize: 13, color: "#555", marginBottom: 16, fontFamily: "'IBM Plex Mono', monospace" }}>
+      <p style={{ fontSize: 13, color: "#555", marginBottom: 16, fontFamily: "'Vidaloka', serif" }}>
         Each preset is a complete cinematic mood — not a template. Choose your atmosphere.
       </p>
 
@@ -25,7 +25,7 @@ export default function PresetSelector({ selectedPreset, selectedFont, onPresetC
             <PresetMiniPreview preset={p} />
             <div style={{ padding: "10px 12px", background: "#000", borderTop: "2px solid #333" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 4 }}>
-                <span style={{ color: "#fff", fontFamily: "'Bebas Neue', sans-serif", fontSize: 18, letterSpacing: 2 }}>
+                <span style={{ color: "#fff", fontFamily: "'Vidaloka', serif", fontSize: 18, letterSpacing: 2 }}>
                   {p.name}
                 </span>
                 {p.locked && (
@@ -35,12 +35,12 @@ export default function PresetSelector({ selectedPreset, selectedFont, onPresetC
                   <span style={{ background: "#00C2CB", color: "#000", fontSize: 9, fontWeight: 900, padding: "1px 6px" }}>ACTIVE</span>
                 )}
               </div>
-              <p style={{ color: "#888", fontSize: 10, fontFamily: "'IBM Plex Mono', monospace", lineHeight: 1.4, margin: 0 }}>
+              <p style={{ color: "#888", fontSize: 10, fontFamily: "'Vidaloka', serif", lineHeight: 1.4, margin: 0 }}>
                 {p.description}
               </p>
               <div style={{ display: "flex", gap: 4, marginTop: 8, flexWrap: "wrap" }}>
                 {p.tags.map((t) => (
-                  <span key={t} style={{ border: `1px solid ${p.accent}`, color: p.accent, fontSize: 8, padding: "1px 5px", fontFamily: "'IBM Plex Mono', monospace", fontWeight: 700, letterSpacing: 0.5 }}>
+                  <span key={t} style={{ border: `1px solid ${p.accent}`, color: p.accent, fontSize: 8, padding: "1px 5px", fontFamily: "'Vidaloka', serif", fontWeight: 700, letterSpacing: 0.5 }}>
                     {t}
                   </span>
                 ))}
@@ -55,7 +55,7 @@ export default function PresetSelector({ selectedPreset, selectedFont, onPresetC
         <div className="panel-header" style={{ background: "#222" }}>CUSTOMIZATION — LIMITED BY DESIGN</div>
         <div style={{ padding: 16, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
           <div>
-            <label style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, display: "block", marginBottom: 6, fontFamily: "'IBM Plex Mono', monospace" }}>
+            <label style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, display: "block", marginBottom: 6, fontFamily: "'Vidaloka', serif" }}>
               DISPLAY FONT
             </label>
             <select value={selectedFont} onChange={(e) => onFontChange(e.target.value)}>
@@ -63,7 +63,7 @@ export default function PresetSelector({ selectedPreset, selectedFont, onPresetC
             </select>
           </div>
           <div>
-            <label style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, display: "block", marginBottom: 6, fontFamily: "'IBM Plex Mono', monospace" }}>
+            <label style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, display: "block", marginBottom: 6, fontFamily: "'Vidaloka', serif" }}>
               ASPECT RATIO
             </label>
             <select defaultValue="9:16">

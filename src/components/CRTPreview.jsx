@@ -65,7 +65,7 @@ export default function CRTPreview({ lyrics, currentLine, isPlaying }) {
         ctx.save();
         ctx.globalAlpha = 0.25 * alpha;
         ctx.fillStyle   = "#00ff41";
-        ctx.font        = `500 16px 'IBM Plex Mono', monospace`;
+        ctx.font        = `500 16px 'Vidaloka', serif`;
         ctx.textAlign   = "center";
         ctx.shadowColor = "#00ff41";
         ctx.shadowBlur  = 8;
@@ -84,10 +84,10 @@ export default function CRTPreview({ lyrics, currentLine, isPlaying }) {
       // Adaptive font size
       const text = (line?.text || "").toUpperCase();
       let fontSize = 28;
-      ctx.font = `700 ${fontSize}px 'IBM Plex Mono', monospace`;
+      ctx.font = `700 ${fontSize}px 'Vidaloka', serif`;
       while (ctx.measureText(text).width > W - 80 && fontSize > 14) {
         fontSize--;
-        ctx.font = `700 ${fontSize}px 'IBM Plex Mono', monospace`;
+        ctx.font = `700 ${fontSize}px 'Vidaloka', serif`;
       }
       ctx.textAlign = "center";
       ctx.fillText(text, W / 2, H / 2 + 8);
@@ -104,7 +104,7 @@ export default function CRTPreview({ lyrics, currentLine, isPlaying }) {
         ctx.save();
         ctx.globalAlpha = 0.12 * alpha;
         ctx.fillStyle   = "#00ff41";
-        ctx.font        = `400 14px 'IBM Plex Mono', monospace`;
+        ctx.font        = `400 14px 'Vidaloka', serif`;
         ctx.textAlign   = "center";
         ctx.shadowColor = "#00ff41";
         ctx.shadowBlur  = 4;
@@ -116,7 +116,7 @@ export default function CRTPreview({ lyrics, currentLine, isPlaying }) {
       ctx.save();
       ctx.globalAlpha = 0.35 * alpha;
       ctx.fillStyle   = "#00ff41";
-      ctx.font        = `400 10px 'IBM Plex Mono', monospace`;
+      ctx.font        = `400 10px 'Vidaloka', serif`;
       const mm = String(Math.floor(f / 60)).padStart(2, "0");
       const ss = String(f % 60).padStart(2, "0");
       ctx.textAlign = "left";

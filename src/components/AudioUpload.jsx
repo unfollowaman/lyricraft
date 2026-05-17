@@ -76,20 +76,20 @@ export default function AudioUpload({
         {audioFile ? (
           <>
             <div style={{ fontSize: 28, marginBottom: 8 }}>🎵</div>
-            <div style={{ fontWeight: 700, fontFamily: "'IBM Plex Mono', monospace" }}>
+            <div style={{ fontWeight: 700, fontFamily: "'Vidaloka', serif" }}>
               {audioFile.name}
             </div>
-            <div style={{ fontSize: 12, color: "#888", marginTop: 4, fontFamily: "'IBM Plex Mono', monospace" }}>
+            <div style={{ fontSize: 12, color: "#888", marginTop: 4, fontFamily: "'Vidaloka', serif" }}>
               {(audioFile.size / 1024 / 1024).toFixed(2)} MB — click to replace
             </div>
           </>
         ) : (
           <>
             <div style={{ fontSize: 36, marginBottom: 8 }}>⬆</div>
-            <div style={{ fontWeight: 700, fontFamily: "'IBM Plex Mono', monospace", marginBottom: 4 }}>
+            <div style={{ fontWeight: 700, fontFamily: "'Vidaloka', serif", marginBottom: 4 }}>
               DROP AUDIO FILE HERE
             </div>
-            <div style={{ fontSize: 12, color: "#888", fontFamily: "'IBM Plex Mono', monospace" }}>
+            <div style={{ fontSize: 12, color: "#888", fontFamily: "'Vidaloka', serif" }}>
               MP3 · WAV · OGG — up to 100 MB
             </div>
           </>
@@ -113,7 +113,7 @@ export default function AudioUpload({
               {isPlaying ? "⏸ PAUSE" : "▶ PLAY"}
             </button>
 
-            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 12 }}>
+            <span style={{ fontFamily: "'Vidaloka', serif", fontSize: 12 }}>
               {String(Math.floor(currentTime / 60)).padStart(2, "0")}:
               {String(Math.floor(currentTime % 60)).padStart(2, "0")}
               {" / "}

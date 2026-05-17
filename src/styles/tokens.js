@@ -18,10 +18,10 @@ export const T = {
 };
 
 export const FONTS = [
-  "IBM Plex Mono",
+  "Vidaloka",
   "Space Mono",
   "Courier New",
-  "Bebas Neue",
+  "Vidaloka",
   "Roboto Mono",
 ];
 

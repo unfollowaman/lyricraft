@@ -24,7 +24,7 @@ export default function StepIndicator({ steps, current }) {
                 textTransform: "uppercase",
                 letterSpacing: 1,
                 color: i === current ? "#000" : "#888",
-                fontFamily: "'IBM Plex Mono', monospace",
+                fontFamily: "'Vidaloka', serif",
               }}
             >
               {s}

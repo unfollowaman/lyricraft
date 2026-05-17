@@ -47,7 +47,7 @@ export default function ExportPanel({ onNotify }) {
       {/* Progress */}
       {exporting && (
         <div style={{ marginBottom: 16 }}>
-          <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'IBM Plex Mono', monospace", marginBottom: 8 }}>
+          <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'Vidaloka', serif", marginBottom: 8 }}>
             RENDERING FRAMES — {exportProgress}%
           </div>
           <div className="progress-bar">
@@ -62,8 +62,8 @@ export default function ExportPanel({ onNotify }) {
       {exported && (
         <div style={{ border: "3px solid #00C2CB", background: "#e8fff9", padding: 16, marginBottom: 16, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div>
-            <div style={{ fontWeight: 900, fontFamily: "'IBM Plex Mono', monospace", marginBottom: 4 }}>✓ EXPORT COMPLETE</div>
-            <div style={{ fontSize: 12, color: "#555", fontFamily: "'IBM Plex Mono', monospace" }}>
+            <div style={{ fontWeight: 900, fontFamily: "'Vidaloka', serif", marginBottom: 4 }}>✓ EXPORT COMPLETE</div>
+            <div style={{ fontSize: 12, color: "#555", fontFamily: "'Vidaloka', serif" }}>
               lyricraft_export.{selectedFormat.toLowerCase().replace(" ", "_")} · ~4.2 MB
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function ExportPanel({ onNotify }) {
         </button>
       </div>
 
-      <p style={{ fontSize: 11, color: "#888", marginTop: 12, fontFamily: "'IBM Plex Mono', monospace", lineHeight: 1.6 }}>
+      <p style={{ fontSize: 11, color: "#888", marginTop: 12, fontFamily: "'Vidaloka', serif", lineHeight: 1.6 }}>
         Rendering happens entirely in your browser using Canvas + FFmpeg WASM.<br />
         No uploads. No servers. Your content stays local.
       </p>
