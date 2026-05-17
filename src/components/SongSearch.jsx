@@ -38,7 +38,7 @@ export default function SongSearch({ onComplete, onNotify }) {
 
   return (
     <Panel label="01 // SONG SEARCH" badge="LYRICS ENGINE">
-      <p style={{ fontSize: 13, color: "#555", marginBottom: 16, fontFamily: "'IBM Plex Mono', monospace" }}>
+      <p style={{ fontSize: 13, color: "#555", marginBottom: 16, fontFamily: "'Vidaloka', serif" }}>
         Enter a song name to fetch lyrics automatically, or paste manually below.
       </p>
 
@@ -74,7 +74,7 @@ export default function SongSearch({ onComplete, onNotify }) {
       {lyrics.length > 0 && (
         <>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-            <span style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'IBM Plex Mono', monospace" }}>
+            <span style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'Vidaloka', serif" }}>
               {lyrics.length} LINES DETECTED
             </span>
             <span className="tag tag-teal">SYNCED</span>
@@ -90,11 +90,11 @@ export default function SongSearch({ onComplete, onNotify }) {
                 tabIndex={0}
                 aria-label={`Line ${i + 1}: ${l.text}`}
               >
-                <span style={{ color: "#888", fontSize: 11, minWidth: 32, fontFamily: "'IBM Plex Mono', monospace" }}>
+                <span style={{ color: "#888", fontSize: 11, minWidth: 32, fontFamily: "'Vidaloka', serif" }}>
                   {String(Math.floor(l.start / 60)).padStart(2, "0")}:{String(Math.floor(l.start % 60)).padStart(2, "0")}
                 </span>
                 <span style={{ flex: 1 }}>{l.text}</span>
-                <span style={{ fontSize: 10, color: "#aaa", fontFamily: "'IBM Plex Mono', monospace" }}>
+                <span style={{ fontSize: 10, color: "#aaa", fontFamily: "'Vidaloka', serif" }}>
                   {(l.end - l.start).toFixed(1)}s
                 </span>
               </div>

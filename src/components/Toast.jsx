@@ -29,7 +29,7 @@ export default function Toast({ notification, onDismiss }) {
         display: "flex",
         alignItems: "center",
         gap: 12,
-        fontFamily: "'IBM Plex Mono', monospace",
+        fontFamily: "'Vidaloka', serif",
         fontWeight: 700,
         fontSize: 13,
         maxWidth: 380,

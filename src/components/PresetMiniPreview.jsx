@@ -40,18 +40,18 @@ export default function PresetMiniPreview({ preset }) {
         ctx.shadowColor = "#00ff41";
         ctx.shadowBlur  = glow;
         ctx.fillStyle   = "#00ff41";
-        ctx.font        = `bold 11px 'IBM Plex Mono', monospace`;
+        ctx.font        = `bold 11px 'Vidaloka', serif`;
         ctx.textAlign   = "center";
         ctx.fillText("CRT MONO", W / 2, H / 2 + 4);
         ctx.shadowBlur  = 0;
         ctx.globalAlpha = 0.3;
-        ctx.font        = `10px 'IBM Plex Mono', monospace`;
+        ctx.font        = `10px 'Vidaloka', serif`;
         ctx.fillText("PHOSPHOR GLOW", W / 2, H / 2 + 16);
         ctx.globalAlpha = 1;
 
       } else if (preset.preview === "vhs") {
         ctx.fillStyle   = preset.accent;
-        ctx.font        = `bold 11px 'IBM Plex Mono', monospace`;
+        ctx.font        = `bold 11px 'Vidaloka', serif`;
         ctx.textAlign   = "center";
         ctx.globalAlpha = 0.6;
         ctx.fillText("VHS DRIFT", W / 2 + (Math.random() - 0.5) * 2, H / 2);
@@ -60,7 +60,7 @@ export default function PresetMiniPreview({ preset }) {
       } else {
         // void
         ctx.fillStyle = "#fff";
-        ctx.font      = `bold 11px 'IBM Plex Mono', monospace`;
+        ctx.font      = `bold 11px 'Vidaloka', serif`;
         ctx.textAlign = "center";
         ctx.fillText("VOID SIGNAL", W / 2, H / 2);
       }
@@ -70,7 +70,7 @@ export default function PresetMiniPreview({ preset }) {
         ctx.fillStyle = "rgba(0,0,0,0.65)";
         ctx.fillRect(0, 0, W, H);
         ctx.fillStyle   = "#FFF700";
-        ctx.font        = `bold 14px 'IBM Plex Mono', monospace`;
+        ctx.font        = `bold 14px 'Vidaloka', serif`;
         ctx.textAlign   = "center";
         ctx.fillText("🔒", W / 2, H / 2 + 5);
       }
