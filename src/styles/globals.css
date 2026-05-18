@@ -30,7 +30,7 @@ html {
 
 body {
   background: var(--color-beige);
-  font-family: 'Vidaloka', serif;
+  font-family: 'Spectral SC', serif;
   color: var(--color-black);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -52,7 +52,7 @@ body {
   cursor: pointer;
   box-shadow: var(--shadow-1);
   transition: box-shadow 0.08s ease-out, transform 0.08s ease-out;
-  font-family: 'Vidaloka', serif;
+  font-family: 'Spectral SC', serif;
   letter-spacing: 1px;
   display: inline-flex;
   align-items: center;
@@ -86,7 +86,7 @@ select {
   font-size: 15px;
   background: var(--color-white);
   outline: none;
-  font-family: 'Vidaloka', serif;
+  font-family: 'Spectral SC', serif;
   width: 100%;
   color: #000;
 }
@@ -122,7 +122,7 @@ select.error {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Vidaloka', serif;
+  font-family: 'Spectral SC', serif;
 }
 
 /* ── Step Badge ── */
@@ -136,7 +136,7 @@ select.error {
   font-weight: 900;
   font-size: 13px;
   flex-shrink: 0;
-  font-family: 'Vidaloka', serif;
+  font-family: 'Spectral SC', serif;
 }
 .step-active { background: var(--color-yellow); }
 .step-done   { background: #000; color: #fff; }
@@ -151,7 +151,7 @@ select.error {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: 'Vidaloka', serif;
+  font-family: 'Spectral SC', serif;
   cursor: default;
 }
 .tag-teal    { background: var(--color-teal); }
@@ -175,7 +175,7 @@ select.error {
 .lyric-line {
   border-bottom: 2px solid #000;
   padding: 8px 12px;
-  font-family: 'Vidaloka', serif;
+  font-family: 'Spectral SC', serif;
   font-size: 14px;
   background: #fff;
   cursor: pointer;
@@ -204,7 +204,7 @@ select.error {
   padding-left: 8px;
   font-size: 11px;
   font-weight: 700;
-  font-family: 'Vidaloka', serif;
+  font-family: 'Spectral SC', serif;
 }
 
 /* ── Divider ── */
