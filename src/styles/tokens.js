@@ -13,8 +13,8 @@ export const T = {
   beige:   "#F5F5DC",
 
   border:  "3px solid #000000",
-  shadow1: "4px 4px 0px #000000",
-  shadow2: "12px 12px 0px #000000",
+  shadow1: "0 4px 12px rgba(0, 0, 0, 0.08)",
+  shadow2: "0 10px 28px rgba(0, 0, 0, 0.10)",
 };
 
 export const FONTS = [
