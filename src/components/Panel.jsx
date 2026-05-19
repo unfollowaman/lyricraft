@@ -10,7 +10,14 @@ import { T } from "../styles/tokens.js";
  */
 export default function Panel({ label, badge, accent, children }) {
   return (
-    <div className="card" style={{ marginBottom: 24 }}>
+    <div
+      className="card"
+      style={{
+        marginBottom: 24,
+        borderRadius: 12,
+        boxShadow: "0 2px 4px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.12), 0 2px 0px rgba(255,255,255,0.05) inset",
+      }}
+    >
       <div className="panel-header">
         <span>{label}</span>
         {badge && (

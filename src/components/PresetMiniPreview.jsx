@@ -88,7 +88,12 @@ export default function PresetMiniPreview({ preset }) {
       width={160}
       height={90}
       aria-label={`${preset.name} preset preview`}
-      style={{ width: "100%", display: "block" }}
+      style={{
+        width: "100%",
+        display: "block",
+        borderRadius: 10,
+        boxShadow: "0 2px 4px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.12), 0 2px 0px rgba(255,255,255,0.05) inset",
+      }}
     />
   );
 }
