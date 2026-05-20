@@ -38,24 +38,51 @@ export default function SongSearch({ onComplete, onNotify }) {
 
   return (
     <Panel label="01 // SONG SEARCH" badge="LYRICS ENGINE">
-      <p style={{ fontSize: 13, color: "#555", marginBottom: 16, fontFamily: "'Vidaloka', serif" }}>
+      <p style={{ fontSize: 12, color: "#9B9B98", marginTop: 8, marginBottom: 16, fontFamily: "'DM Sans', sans-serif" }}>
         Enter a song name to fetch lyrics automatically, or paste manually below.
       </p>
 
       {/* Search Row */}
-      <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
+      <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 16 }}>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSearch()}
           placeholder="e.g. Blinding Lights — The Weeknd"
           aria-label="Song search query"
-          style={{ flex: 1 }}
+          style={{
+            flex: 1,
+            width: "100%",
+            height: 44,
+            border: "1.5px solid #E0E0DC",
+            borderRadius: 10,
+            padding: "0 14px",
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 14,
+            color: "#1A1A1A",
+            background: "#FAFAF8",
+            outline: "none",
+          }}
         />
         <button
           className={`btn btn-primary ${searching || !query.trim() ? "btn-disabled" : ""}`}
           onClick={handleSearch}
-          style={{ whiteSpace: "nowrap", flexShrink: 0 }}
+          style={{
+            whiteSpace: "nowrap",
+            flexShrink: 0,
+            height: 44,
+            padding: "0 20px",
+            background: "#1A1A1A",
+            color: "#FFFFFF",
+            border: "none",
+            borderRadius: 10,
+            fontFamily: "'DM Sans', sans-serif",
+            fontWeight: 600,
+            fontSize: 13,
+            letterSpacing: "0.03em",
+            cursor: "pointer",
+            transition: "all 0.15s ease",
+          }}
         >
           {searching ? "FETCHING..." : "FETCH LYRICS"}
         </button>

@@ -44,7 +44,7 @@ export default function AudioUpload({
     <Panel
       label="02 // AUDIO UPLOAD"
       badge={audioFile ? "LOADED" : "WAITING"}
-      accent={audioFile ? T.teal : T.yellow}
+      accent={audioFile ? T.teal : "#A06A00"}
     >
       {/* Drop Zone */}
       <div
@@ -55,13 +55,19 @@ export default function AudioUpload({
         tabIndex={0}
         aria-label="Upload audio file"
         style={{
-          border: "3px dashed #000",
-          background: audioFile ? "#e8fff9" : "#fafafa",
-          padding: 32,
+          border: "1.5px dashed #C8C8C4",
+          borderRadius: 14,
+          background: audioFile ? "#F4F4F2" : "#FAFAF8",
+          padding: "40px 24px",
           textAlign: "center",
           cursor: "pointer",
           marginBottom: audioFile ? 16 : 0,
-          transition: "background 0.1s",
+          transition: "all 0.15s ease",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 10,
         }}
       >
         <input
@@ -85,11 +91,11 @@ export default function AudioUpload({
           </>
         ) : (
           <>
-            <div style={{ fontSize: 36, marginBottom: 8 }}>⬆</div>
-            <div style={{ fontWeight: 700, fontFamily: "'Vidaloka', serif", marginBottom: 4 }}>
+            <div style={{ width: 40, height: 40, borderRadius: 10, background: "#F0F0ED", border: "1.5px solid #E0E0DC", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, color: "#6B6B68", marginBottom: 4 }}>↑</div>
+            <div style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 14, color: "#1A1A1A", letterSpacing: "0.01em", marginBottom: 4 }}>
               DROP AUDIO FILE HERE
             </div>
-            <div style={{ fontSize: 12, color: "#888", fontFamily: "'Vidaloka', serif" }}>
+            <div style={{ fontSize: 12, color: "#9B9B98", fontFamily: "'DM Mono', monospace" }}>
               MP3 · WAV · OGG — up to 100 MB
             </div>
           </>
