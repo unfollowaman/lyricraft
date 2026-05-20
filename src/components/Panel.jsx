@@ -1,43 +1,82 @@
-import { T } from "../styles/tokens.js";
-
 /**
  * Panel
- * Neo-Brutalist card wrapper with black header bar.
+ * Soft card wrapper.
  * Props:
  *   label  — header text (uppercase)
  *   badge  — optional small pill in header
- *   accent — badge background color (defaults to teal)
+ *   accent — kept for API compatibility
  */
 export default function Panel({ label, badge, accent, children }) {
+  const [stepNumber, stepTitle] = label.includes("//")
+    ? label.split("//").map((part) => part.trim())
+    : [null, label];
+
   return (
     <div
-      className="card"
       style={{
-        marginBottom: 24,
-        borderRadius: 12,
-        boxShadow: "0 2px 4px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.12), 0 2px 0px rgba(255,255,255,0.05) inset",
+        background: "#FFFFFF",
+        border: "1.5px solid #E0E0DC",
+        borderRadius: 16,
+        boxShadow: "0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08)",
+        padding: 24,
+        marginBottom: 20,
       }}
     >
-      <div className="panel-header">
-        <span>{label}</span>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 12,
+          marginBottom: 20,
+          paddingBottom: 16,
+          borderBottom: "1px solid #F0F0ED",
+        }}
+      >
+        {stepNumber && (
+          <span
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: 11,
+              fontWeight: 500,
+              color: "#9B9B98",
+              letterSpacing: "0.06em",
+            }}
+          >
+            {stepNumber} //
+          </span>
+        )}
+        <span
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontWeight: 700,
+            fontSize: 13,
+            letterSpacing: "0.04em",
+            color: "#1A1A1A",
+            textTransform: "uppercase",
+          }}
+        >
+          {stepTitle}
+        </span>
         {badge && (
           <span
             style={{
-              background: accent || T.teal,
-              color: "#000",
-              padding: "2px 8px",
+              marginLeft: "auto",
+              borderRadius: 999,
+              padding: "3px 10px",
               fontSize: 10,
-              fontWeight: 900,
-              letterSpacing: 1,
-              border: "2px solid #fff",
-              fontFamily: "'Spectral SC', serif",
+              fontWeight: 600,
+              letterSpacing: "0.05em",
+              background: "#F0F0ED",
+              color: "#3A3A38",
+              border: "1px solid #E0E0DC",
+              textTransform: "uppercase",
             }}
           >
             {badge}
           </span>
         )}
       </div>
-      <div style={{ padding: 20 }}>{children}</div>
+      <div>{children}</div>
     </div>
   );
 }

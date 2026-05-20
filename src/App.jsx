@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./styles/globals.css";
 
-import { T, STEPS } from "./styles/tokens.js";
+import { STEPS } from "./styles/tokens.js";
 import StepIndicator  from "./components/StepIndicator.jsx";
 import Toast          from "./components/Toast.jsx";
 import SongSearch     from "./components/SongSearch.jsx";
@@ -75,7 +75,7 @@ export default function App() {
   };
 
   return (
-    <>
+    <div style={{ background: "#FAFAF8", minHeight: "100vh", fontFamily: "'DM Sans', sans-serif" }}>
       {/* Hidden audio element */}
       {audioURL && (
         <audio
@@ -93,76 +93,65 @@ export default function App() {
 
       {/* ── Top Navigation ── */}
       <header style={{
-        background: "#000", color: "#fff",
-        padding: "0 32px", height: 56,
+        background: "#FFFFFF",
+        borderBottom: "1px solid #E8E8E4",
+        padding: "0 24px", height: 52,
         display: "flex", alignItems: "center", justifyContent: "space-between",
-        borderBottom: "3px solid #FFF700",
         position: "sticky", top: 0, zIndex: 100,
       }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <span style={{ fontFamily: "'Spectral SC', serif", fontSize: 26, letterSpacing: 4, color: T.teal }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 13, fontWeight: 500, letterSpacing: "0.12em", color: "#1A1A1A" }}>
             LYRICRAFT
           </span>
           <span style={{
-            background: T.yellow, color: "#000",
-            padding: "2px 8px", fontSize: 10, fontWeight: 900,
-            letterSpacing: 1, border: "2px solid #fff",
-            fontFamily: "'Spectral SC', serif",
+            background: "#1A1A1A", color: "#FFFFFF",
+            borderRadius: 4, padding: "2px 6px", fontSize: 9, fontWeight: 700, letterSpacing: "0.08em",
           }}>BETA</span>
         </div>
         <nav style={{ display: "flex", gap: 8 }}>
-          <span className="tag tag-teal" style={{ cursor: "pointer" }}>Docs</span>
-          <span className="tag" style={{ background: "#333", color: "#fff", border: "2px solid #555", cursor: "pointer" }}>GitHub</span>
+          <a href="#" style={{ fontSize: 12, fontWeight: 500, color: "#6B6B68", border: "1px solid #E0E0DC", borderRadius: 8, padding: "4px 12px", textDecoration: "none" }}>DOCS</a>
+          <a href="#" style={{ fontSize: 12, fontWeight: 500, color: "#6B6B68", border: "1px solid #E0E0DC", borderRadius: 8, padding: "4px 12px", textDecoration: "none" }}>GITHUB</a>
         </nav>
       </header>
 
       {/* ── Hero Strip ── */}
       <div style={{
-        background: "#000", color: "#fff",
-        padding: "28px 32px",
-        borderBottom: "3px solid #000",
-        display: "flex", alignItems: "center", justifyContent: "space-between", gap: 32,
+        background: "#FFFFFF",
+        borderBottom: "1px solid #E8E8E4",
+        padding: "40px 24px 32px",
+        textAlign: "left",
       }}>
         <div>
           <h1 style={{
-            fontFamily: "'Spectral SC', serif",
-            fontSize: "clamp(32px, 5vw, 52px)",
-            letterSpacing: 3, lineHeight: 1, marginBottom: 8,
+            fontFamily: "'DM Sans', sans-serif",
+            letterSpacing: "-0.02em", lineHeight: 1.1, marginBottom: 8,
           }}>
-            CINEMATIC{" "}
-            <span style={{ color: T.teal }}>LYRIC MOTION</span>{" "}
-            <span style={{ color: T.yellow }}>GENERATOR</span>
+            <span style={{ display: "block", fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 800, color: "#1A1A1A" }}>CINEMATIC LYRIC</span>
+            <span style={{ display: "block", fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 800, color: "#6B6B68" }}>MOTION GENERATOR</span>
           </h1>
-          <p style={{ fontFamily: "'Spectral SC', serif", fontSize: 13, color: "#aaa", maxWidth: 480, lineHeight: 1.6 }}>
+          <p style={{ fontSize: 13, color: "#9B9B98", marginTop: 8, fontWeight: 400 }}>
             Browser-native. No upload limits. No watermarks.<br />
             Premium cinematic typography — exported locally.
           </p>
         </div>
-        <div style={{ display: "flex", gap: 8, flexShrink: 0, flexWrap: "wrap" }}>
+        <div style={{ display: "inline-flex", gap: 6, flexShrink: 0, flexWrap: "wrap", marginTop: 16 }}>
           {["MP4", "WEBM", "MOV", "GIF"].map((f) => (
-            <span key={f} className="tag" style={{ background: "#222", color: "#aaa", border: "2px solid #444" }}>{f}</span>
+            <span key={f} style={{ border: "1.5px solid #2C2C2C", borderRadius: 6, padding: "3px 8px", fontSize: 11, fontWeight: 600, fontFamily: "'DM Mono', monospace", background: "transparent", color: "#1A1A1A" }}>{f}</span>
           ))}
         </div>
       </div>
 
       {/* ── Step Navigator ── */}
-      <div style={{
-        background: T.beige,
-        borderBottom: "3px solid #000",
-        padding: "16px 32px",
-        overflowX: "auto",
-      }}>
-        <StepIndicator steps={STEPS} current={step} />
-      </div>
+      <StepIndicator steps={STEPS} current={step} />
 
       {/* ── Main Layout ── */}
       <main style={{
         maxWidth: 1200,
         margin: "0 auto",
-        padding: "32px",
+        padding: "24px",
         display: "grid",
-        gridTemplateColumns: "1fr 420px",
-        gap: 32,
+        gridTemplateColumns: "1fr 380px",
+        gap: 24,
         alignItems: "start",
       }}>
         {/* Left — Workflow panels */}
@@ -210,19 +199,18 @@ export default function App() {
 
       {/* ── Footer ── */}
       <footer style={{
-        borderTop: "3px solid #000",
-        background: "#000", color: "#555",
-        padding: "20px 32px",
+        borderTop: "1px solid #E8E8E4",
+        background: "#FFFFFF", color: "#9B9B98",
+        padding: "20px 24px",
         display: "flex", justifyContent: "space-between", alignItems: "center",
-        fontFamily: "'Spectral SC', serif", fontSize: 11,
-        marginTop: 32, flexWrap: "wrap", gap: 8,
+        fontSize: 11, marginTop: 24, flexWrap: "wrap", gap: 8,
       }}>
-        <span style={{ color: T.teal, fontFamily: "'Spectral SC', serif", fontSize: 18, letterSpacing: 3 }}>
+        <span style={{ color: "#1A1A1A", fontFamily: "'DM Mono', monospace", fontSize: 12, letterSpacing: "0.12em" }}>
           LYRICRAFT
         </span>
         <span>BROWSER-NATIVE · CANVAS + FFMPEG WASM · NO SERVERS</span>
         <span>V1.0 · CRT MONO PRESET</span>
       </footer>
-    </>
+    </div>
   );
 }
