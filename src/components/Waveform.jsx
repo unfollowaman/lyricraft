@@ -31,13 +31,13 @@ export default function Waveform({ currentTime, duration, onSeek }) {
       const bh = h * (H * 0.85);
       const by = (H - bh) / 2;
 
-      ctx.fillStyle = x < progressX ? "#00C2CB" : "#000";
+      ctx.fillStyle = x < progressX ? "#1A1A1A" : "#E0E0DC";
       ctx.fillRect(x, by, bw, bh);
     });
 
-    // Yellow playhead
-    ctx.fillStyle = "#FFF700";
-    ctx.fillRect(progressX - 1.5, 0, 3, H);
+    // current position bar
+    ctx.fillStyle = "#1A1A1A";
+    ctx.fillRect(progressX - 2, 0, 4, H);
   }, [currentTime, duration]);
 
   const handleClick = (e) => {
@@ -55,7 +55,7 @@ export default function Waveform({ currentTime, duration, onSeek }) {
       onClick={handleClick}
       aria-label="Audio waveform — click to seek"
       role="slider"
-      style={{ width: "100%", height: "60px", cursor: "crosshair", display: "block" }}
+      style={{ width: "100%", height: "60px", cursor: "crosshair", display: "block", background: "#FAFAF8", border: "1.5px solid #E8E8E4", borderRadius: 12, padding: "12px 16px", overflow: "hidden", boxSizing: "border-box" }}
     />
   );
 }

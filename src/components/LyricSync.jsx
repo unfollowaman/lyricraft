@@ -9,42 +9,42 @@ import Panel from "./Panel.jsx";
 export default function LyricSync({ lyrics, duration, onComplete }) {
   return (
     <Panel label="03 // LYRIC SYNC" badge="AI-ASSISTED">
-      <p style={{ fontSize: 13, color: "#555", marginBottom: 16, fontFamily: "'Vidaloka', serif" }}>
+      <p style={{ fontSize: 13, color: "#6B6B68", marginBottom: 16, fontFamily: "'DM Sans', sans-serif" }}>
         Lyrics are auto-synced to your audio. Click any line to preview and manually adjust timing.
       </p>
 
       {/* Stats strip */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 16 }}>
         {[
-          ["LINES",    lyrics.length,           "#00C2CB"],
-          ["DURATION", `${duration.toFixed(0)}s`, "#FFF700"],
-          ["STATUS",   "SYNCED",                 "#fff"],
-        ].map(([label, val, bg]) => (
+          ["LINES",    lyrics.length],
+          ["DURATION", `${duration.toFixed(0)}s`],
+          ["STATUS",   "SYNCED"],
+        ].map(([label, val]) => (
           <div
             key={label}
-            style={{ border: "3px solid #000", background: bg, padding: "12px 16px" }}
+            style={{ background: "#FAFAF8", border: "1.5px solid #E8E8E4", borderRadius: 12, padding: "14px 16px" }}
           >
-            <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'Vidaloka', serif", marginBottom: 4 }}>
+            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, fontWeight: 500, color: "#9B9B98", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>
               {label}
             </div>
-            <div style={{ fontSize: 20, fontWeight: 900, fontFamily: "'Vidaloka', serif", letterSpacing: 2 }}>
+            <div style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 800, fontSize: 22, color: label === "STATUS" ? "#3D9970" : "#1A1A1A", lineHeight: 1 }}>
               {val}
             </div>
           </div>
         ))}
       </div>
 
-      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-        <button className="btn btn-outline" style={{ fontSize: 12 }}>↺ RE-SYNC</button>
-        <button className="btn btn-outline" style={{ fontSize: 12 }}>✎ MANUAL EDIT</button>
-        <button
-          className={`btn btn-yellow ${lyrics.length === 0 ? "btn-disabled" : ""}`}
-          onClick={onComplete}
-          style={{ marginLeft: "auto", fontSize: 12 }}
-        >
-          NEXT — PRESET →
-        </button>
+      <div style={{ display: "flex", gap: 10, marginBottom: 14 }}>
+        <button className="btn btn-outline" style={{ flex: 1, height: 40, border: "1.5px solid #E0E0DC", borderRadius: 10, background: "#FFFFFF", color: "#1A1A1A", fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: 13, cursor: "pointer", transition: "all 0.15s ease" }}>↺ RE-SYNC</button>
+        <button className="btn btn-outline" style={{ flex: 1, height: 40, border: "1.5px solid #E0E0DC", borderRadius: 10, background: "#FFFFFF", color: "#1A1A1A", fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: 13, cursor: "pointer", transition: "all 0.15s ease" }}>✎ MANUAL EDIT</button>
       </div>
+      <button
+        className={`btn btn-yellow ${lyrics.length === 0 ? "btn-disabled" : ""}`}
+        onClick={onComplete}
+        style={{ width: "100%", height: 44, background: "#1A1A1A", color: "#FFFFFF", border: "none", borderRadius: 10, fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.03em", cursor: "pointer", transition: "all 0.15s ease" }}
+      >
+        NEXT — PRESET →
+      </button>
     </Panel>
   );
 }

@@ -31,13 +31,13 @@ export default function ExportPanel({ onNotify }) {
       accent={exported ? T.teal : T.yellow}
     >
       {/* Format selector */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8, marginBottom: 20 }}>
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
         {EXPORT_FORMATS.map((f) => (
           <button
             key={f}
             className={`btn ${selectedFormat === f ? "btn-primary" : "btn-outline"}`}
             onClick={() => setSelectedFormat(f)}
-            style={{ fontSize: f === "GREEN SCR" ? 10 : 13 }}
+            style={{ height: 36, padding: "0 16px", border: "1.5px solid #E0E0DC", borderRadius: 8, background: selectedFormat === f ? "#1A1A1A" : "#FFFFFF", fontFamily: "'DM Mono', monospace", fontSize: 12, fontWeight: 600, color: selectedFormat === f ? "#FFFFFF" : "#6B6B68", cursor: "pointer", transition: "all 0.15s ease" }}
           >
             {f}
           </button>
@@ -45,16 +45,18 @@ export default function ExportPanel({ onNotify }) {
       </div>
 
       {/* Progress */}
-      {exporting && (
-        <div style={{ marginBottom: 16 }}>
+      {(exporting || exported) && (
+        <div style={{ background: "#FAFAF8", border: "1.5px solid #E8E8E4", borderRadius: 12, padding: 20, textAlign: "center", marginBottom: 16 }}>
           <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'Vidaloka', serif", marginBottom: 8 }}>
-            RENDERING FRAMES — {exportProgress}%
+            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 12, color: "#9B9B98" }}>{exporting ? `RENDERING FRAMES — ${exportProgress}%` : "EXPORT READY"}</span>
           </div>
-          <div className="progress-bar">
-            <div className="progress-fill" style={{ width: `${exportProgress}%` }}>
-              {exportProgress > 15 && `${exportProgress}%`}
+          {exporting && (
+            <div className="progress-bar">
+              <div className="progress-fill" style={{ width: `${exportProgress}%` }}>
+                {exportProgress > 15 && `${exportProgress}%`}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       )}
 
@@ -71,15 +73,13 @@ export default function ExportPanel({ onNotify }) {
         </div>
       )}
 
-      <div style={{ display: "flex", gap: 8 }}>
-        <button
-          className={`btn btn-yellow ${exporting ? "btn-disabled" : ""}`}
-          onClick={handleExport}
-          style={{ fontSize: 13, flex: 1 }}
-        >
-          {exporting ? `RENDERING ${exportProgress}%...` : exported ? "↓ RE-EXPORT" : "▶ START RENDER"}
-        </button>
-      </div>
+      <button
+        className={`btn btn-yellow ${exporting ? "btn-disabled" : ""}`}
+        onClick={handleExport}
+        style={{ width: "100%", height: 48, background: "#1A1A1A", color: "#FFFFFF", border: "none", borderRadius: 12, fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.02em", cursor: "pointer", transition: "all 0.15s ease" }}
+      >
+        {exporting ? `RENDERING ${exportProgress}%...` : exported ? "↓ RE-EXPORT" : "▶ START RENDER"}
+      </button>
 
       <p style={{ fontSize: 11, color: "#888", marginTop: 12, fontFamily: "'Vidaloka', serif", lineHeight: 1.6 }}>
         Rendering happens entirely in your browser using Canvas + FFmpeg WASM.<br />

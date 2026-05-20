@@ -83,17 +83,18 @@ export default function PresetMiniPreview({ preset }) {
   }, [preset]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      width={160}
-      height={90}
-      aria-label={`${preset.name} preset preview`}
-      style={{
-        width: "100%",
-        display: "block",
-        borderRadius: 10,
-        boxShadow: "0 2px 4px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.12), 0 2px 0px rgba(255,255,255,0.05) inset",
-      }}
-    />
+    <div style={{ aspectRatio: "9 / 16", borderRadius: "10px 10px 0 0", overflow: "hidden", background: "#0A0A0A", position: "relative" }}>
+      <canvas
+        ref={canvasRef}
+        width={160}
+        height={90}
+        aria-label={`${preset.name} preset preview`}
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "block",
+        }}
+      />
+    </div>
   );
 }
