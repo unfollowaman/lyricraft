@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { T } from "../styles/tokens.js";
 import Panel from "./Panel.jsx";
 import { MOCK_LYRICS } from "../data/presets.js";
 
