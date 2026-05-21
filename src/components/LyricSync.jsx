@@ -22,7 +22,7 @@ export default function LyricSync({ lyrics, duration, onComplete }) {
         ].map(([label, val]) => (
           <div
             key={label}
-            style={{ background: "#FAF8F4", border: "1.5px solid #E8E8E4", borderRadius: 12, padding: "14px 16px" }}
+            style={{ background: "transparent", border: "none", borderRadius: 0, padding: "14px 0" }}
           >
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, fontWeight: 500, color: "#A8A49E", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>
               {label}
