@@ -9,7 +9,6 @@ import AudioUpload    from "./components/AudioUpload.jsx";
 import LyricSync      from "./components/LyricSync.jsx";
 import PresetSelector from "./components/PresetSelector.jsx";
 import ExportPanel    from "./components/ExportPanel.jsx";
-import PreviewSidebar from "./components/PreviewSidebar.jsx";
 
 export default function App() {
   // ── Workflow state ──
@@ -114,50 +113,17 @@ export default function App() {
         </nav>
       </header>
 
-      {/* ── Hero Strip ── */}
-      <div style={{
-        background: "#FDFCF9",
-        padding: "32px 24px 28px",
-        textAlign: "left",
-      }} className="mobile-hero">
-        <div style={{ background: "#1A1A1A", borderRadius: 16, padding: "20px 24px" }} className="mobile-hero-block">
-          <h1 style={{
-            fontFamily: "'Playfair Display', serif",
-            letterSpacing: "-0.02em", lineHeight: 1, marginBottom: 8,
-          }}>
-            <span className="mobile-hero-title" style={{ display: "block", fontSize: "clamp(36px, 7vw, 74px)", fontWeight: 900, fontStyle: "italic", color: "#F5F2EC" }}>CINEMATIC LYRIC</span>
-            <span className="mobile-hero-title" style={{ display: "block", fontSize: "clamp(36px, 7vw, 74px)", fontWeight: 900, fontStyle: "italic", color: "#9D9890" }}>MOTION GENERATOR</span>
-          </h1>
-        </div>
-        <div style={{ height: 2, background: "#1A1A1A", opacity: 1, margin: "14px 0 10px" }} />
-        <div>
-          <p style={{ fontSize: 12, color: "#7A7670", marginTop: 10, fontWeight: 400, lineHeight: 1.5 }}>
-            Browser-native. No upload limits. No watermarks.<br />
-            Premium cinematic typography — exported locally.
-          </p>
-        </div>
-        <div style={{ display: "inline-flex", gap: 6, flexShrink: 0, flexWrap: "wrap", marginTop: 0 }}>
-          {["MP4", "WEBM", "MOV", "GIF"].map((f) => (
-            <span key={f} style={{ border: "1.5px solid #1A1A1A", borderRadius: 5, padding: "2px 8px", fontSize: 10, fontWeight: 500, fontFamily: "'DM Mono', monospace", letterSpacing: "0.06em", background: "transparent", color: "#1A1A1A" }}>{f}</span>
-          ))}
-        </div>
-      </div>
-
       {/* ── Step Navigator ── */}
       <StepIndicator steps={STEPS} current={step} />
 
       {/* ── Main Layout ── */}
       <main className="mobile-main-layout" style={{
-        maxWidth: 1200,
+        maxWidth: 680,
         margin: "0 auto",
-        padding: "24px",
-        display: "grid",
-        gridTemplateColumns: "1fr 380px",
-        gap: 20,
-        alignItems: "start",
+        padding: 0,
+        display: "flex",
+        flexDirection: "column",
       }}>
-        {/* Left — Workflow panels */}
-        <div>
           <SongSearch
             onComplete={(fetchedLyrics) => { setLyrics(fetchedLyrics); setStep(1); }}
             onNotify={showNotif}
@@ -187,32 +153,7 @@ export default function App() {
             onComplete={() => setStep(4)}
           />
           <ExportPanel onNotify={showNotif} />
-        </div>
-
-        {/* Right — Live preview sidebar */}
-        <PreviewSidebar
-          lyrics={lyrics}
-          currentLine={currentLine}
-          isPlaying={isPlaying}
-          onLineChange={setCurrentLine}
-          onTogglePlay={togglePlay}
-        />
       </main>
-
-      {/* ── Footer ── */}
-      <footer style={{
-        borderTop: "1px solid #E8E8E4",
-        background: "#FDFCF9", color: "#A8A49E",
-        padding: "20px 24px",
-        display: "flex", justifyContent: "space-between", alignItems: "center",
-        fontSize: 11, marginTop: 24, flexWrap: "wrap", gap: 8,
-      }}>
-        <span style={{ color: "#1A1A1A", fontFamily: "'DM Mono', monospace", fontSize: 12, letterSpacing: "0.12em" }}>
-          LYRICRAFT
-        </span>
-        <span>BROWSER-NATIVE · CANVAS + FFMPEG WASM · NO SERVERS</span>
-        <span>V1.0 · CRT MONO PRESET</span>
-      </footer>
     </div>
   );
 }
