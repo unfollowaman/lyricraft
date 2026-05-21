@@ -5,14 +5,14 @@
 
 export const tokens = {
   color: {
-    bg: '#FAFAF8',
-    surface: '#FFFFFF',
+    bg: '#F5F2EC',
+    surface: '#FDFCF9',
     surfaceHover: '#F4F4F2',
-    border: '#E0E0DC',
-    borderStrong: '#2C2C2C',
+    border: '#D8D4CC',
+    borderStrong: '#1A1A1A',
     text: '#1A1A1A',
-    textMuted: '#6B6B68',
-    textLight: '#9B9B98',
+    textMuted: '#7A7670',
+    textLight: '#A8A49E',
     accent: '#1A1A1A',
     accentFg: '#FFFFFF',
     tag: '#F0F0ED',
@@ -32,15 +32,16 @@ export const tokens = {
     sm: '0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)',
     md: '0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04)',
     lg: '0 8px 32px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06)',
-    card: '0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08)',
+    card: '0 2px 6px rgba(0,0,0,0.05), 0 10px 28px rgba(0,0,0,0.07)',
   },
   font: {
+    display: "'Fraunces', serif",
     body: "'DM Sans', sans-serif",
     mono: "'DM Mono', monospace",
   },
   border: {
-    default: '1.5px solid #E0E0DC',
-    strong: '1.5px solid #2C2C2C',
+    default: '1.5px solid #D8D4CC',
+    strong: '1.5px solid #1A1A1A',
     focus: '2px solid #1A1A1A',
   },
 };

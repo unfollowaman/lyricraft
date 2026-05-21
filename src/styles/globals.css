@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
 /* ═══════════════════════════════════════════════════════════
    LYRICRAFT — Global Design System (Editorial)
 ═══════════════════════════════════════════════════════════ */
 
 :root {
-  --color-bg: #FAFAF8;
-  --color-surface: #FFFFFF;
+  --color-bg: #F5F2EC;
+  --color-surface: #FDFCF9;
   --color-surface-hover: #F4F4F2;
-  --color-border: #E0E0DC;
-  --color-border-strong: #2C2C2C;
+  --color-border: #D8D4CC;
+  --color-border-strong: #1A1A1A;
   --color-text: #1A1A1A;
-  --color-text-muted: #6B6B68;
-  --color-text-light: #9B9B98;
+  --color-text-muted: #7A7670;
+  --color-text-light: #A8A49E;
   --color-accent: #1A1A1A;
   --color-accent-fg: #FFFFFF;
   --color-tag: #F0F0ED;
@@ -44,7 +46,7 @@ html {
 }
 
 body {
-  background: var(--color-bg);
+  background: #F5F2EC;
   color: var(--color-text);
   font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
@@ -82,10 +84,10 @@ body {
 .btn:focus-visible { outline: var(--border-focus); outline-offset: 2px; }
 
 .btn-primary { background: var(--color-accent); color: var(--color-accent-fg); border: var(--border-strong); }
-.btn-yellow { background: var(--color-surface); color: var(--color-text); }
+.btn-yellow { background: #FAF8F4; color: var(--color-text); }
 .btn-danger { background: var(--color-danger); color: var(--color-accent-fg); }
 .btn-outline { background: transparent; color: var(--color-text); }
-.btn-white { background: var(--color-surface); color: var(--color-text); }
+.btn-white { background: #FAF8F4; color: var(--color-text); }
 .btn-disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; pointer-events: none; }
 
 input,
@@ -95,7 +97,7 @@ select {
   border-radius: 10px;
   padding: 10px 14px;
   font-size: 15px;
-  background: var(--color-surface);
+  background: #FAF8F4;
   outline: none;
   font-family: 'DM Sans', sans-serif;
   width: 100%;
@@ -116,7 +118,7 @@ select.error {
 .card {
   border: var(--border);
   box-shadow: var(--shadow-card);
-  background: var(--color-surface);
+  background: #FAF8F4;
   border-radius: var(--radius-lg);
 }
 
@@ -150,7 +152,7 @@ select.error {
 }
 .step-active { background: var(--color-accent); color: var(--color-accent-fg); }
 .step-done { background: var(--color-tag); color: var(--color-tag-text); }
-.step-idle { background: var(--color-surface); color: var(--color-text-muted); border: var(--border); }
+.step-idle { background: #FAF8F4; color: var(--color-text-muted); border: var(--border); }
 
 .tag {
   display: inline-block;
@@ -174,7 +176,7 @@ select.error {
   cursor: pointer;
   transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
   box-shadow: var(--shadow-card);
-  background: var(--color-surface);
+  background: #FAF8F4;
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -187,7 +189,7 @@ select.error {
   padding: 10px 12px;
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
-  background: var(--color-surface);
+  background: #FAF8F4;
   cursor: pointer;
   transition: background 0.12s ease;
   display: flex;
@@ -221,5 +223,19 @@ select.error {
 .divider {
   height: 1px;
   background: var(--color-border);
+  width: 100%;
+}
+
+.panel-content > *:first-child + * {
+  border-top: none;
+  position: relative;
+}
+.panel-content > *:first-child + *::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #1A1A1A;
+  opacity: 0.08;
+  margin: 14px 0;
   width: 100%;
 }

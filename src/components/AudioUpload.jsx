@@ -57,7 +57,7 @@ export default function AudioUpload({
         style={{
           border: "1.5px dashed #C8C8C4",
           borderRadius: 14,
-          background: audioFile ? "#F4F4F2" : "#FAFAF8",
+          background: audioFile ? "#F4F4F2" : "#FAF8F4",
           padding: "40px 24px",
           textAlign: "center",
           cursor: "pointer",
@@ -91,11 +91,11 @@ export default function AudioUpload({
           </>
         ) : (
           <>
-            <div style={{ width: 40, height: 40, borderRadius: 10, background: "#F0F0ED", border: "1.5px solid #E0E0DC", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, color: "#6B6B68", marginBottom: 4 }}>↑</div>
+            <div style={{ width: 40, height: 40, borderRadius: 10, background: "#F0F0ED", border: "1.5px solid #D8D4CC", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, color: "#7A7670", marginBottom: 4 }}>↑</div>
             <div style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 14, color: "#1A1A1A", letterSpacing: "0.01em", marginBottom: 4 }}>
               DROP AUDIO FILE HERE
             </div>
-            <div style={{ fontSize: 12, color: "#9B9B98", fontFamily: "'DM Mono', monospace" }}>
+            <div style={{ fontSize: 12, color: "#A8A49E", fontFamily: "'DM Mono', monospace" }}>
               MP3 · WAV · OGG — up to 100 MB
             </div>
           </>
