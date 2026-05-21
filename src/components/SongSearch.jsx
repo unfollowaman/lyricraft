@@ -37,12 +37,12 @@ export default function SongSearch({ onComplete, onNotify }) {
 
   return (
     <Panel label="01 // SONG SEARCH" badge="LYRICS ENGINE">
-      <p style={{ fontSize: 12, color: "#A8A49E", marginTop: 8, marginBottom: 16, fontFamily: "'DM Sans', sans-serif" }}>
+      <span className="label-subheader">INGREDIENTS</span><hr className="label-rule" /><p style={{ fontSize: 12, color: "#7A7670", marginTop: 8, marginBottom: 16, fontFamily: "'DM Sans', sans-serif" }}>
         Enter a song name to fetch lyrics automatically, or paste manually below.
       </p>
 
       {/* Search Row */}
-      <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 16 }}>
+      <div className="mobile-search-row" style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 16 }}>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}

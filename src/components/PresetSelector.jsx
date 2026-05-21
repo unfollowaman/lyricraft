@@ -6,11 +6,11 @@ import { FONTS } from "../styles/tokens.js";
 export default function PresetSelector({ selectedPreset, selectedFont, onPresetChange, onFontChange, onComplete }) {
   return (
     <Panel label="04 // MOTION PRESET" badge="CINEMATIC">
-      <p style={{ fontSize: 13, color: "#7A7670", marginBottom: 16, fontFamily: "'DM Sans', sans-serif" }}>
+      <div><span className="label-subheader">PRESETS</span><hr className="label-rule" /><p style={{ fontSize: 13, color: "#7A7670", marginBottom: 16, fontFamily: "'DM Sans', sans-serif" }}>
         Each preset is a complete cinematic mood — not a template. Choose your atmosphere.
-      </p>
+      </p></div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 20 }}>
+      <div className="mobile-preset-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 20 }}>
         {PRESETS.map((p) => (
           <div
             key={p.id}
@@ -50,10 +50,11 @@ export default function PresetSelector({ selectedPreset, selectedFont, onPresetC
         ))}
       </div>
 
+      <hr className="panel-divider" />
       {/* Customization */}
-      <div style={{ borderTop: "1px solid #F0F0ED", paddingTop: 18, marginTop: 4, marginBottom: 16 }}>
-        <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: "0.1em", color: "#A8A49E", textTransform: "uppercase", marginBottom: 14 }}>CUSTOMIZATION — LIMITED BY DESIGN</div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+      <div style={{ paddingTop: 2, marginTop: 4, marginBottom: 16 }}>
+        <span className="label-subheader" style={{ fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.1em", color: "#A8A49E", textTransform: "uppercase", marginBottom: 14 }}>CUSTOMIZATION — LIMITED BY DESIGN</span><hr className="label-rule" />
+        <div className="mobile-custom-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           <div>
             <label style={{ fontSize: 11, fontWeight: 600, color: "#7A7670", fontFamily: "'DM Sans', sans-serif", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.04em", display: "block" }}>
               DISPLAY FONT

@@ -46,6 +46,9 @@ export default function AudioUpload({
       badge={audioFile ? "LOADED" : "WAITING"}
       accent={audioFile ? tokens.color.success : "#A06A00"}
     >
+      <span className="label-subheader">SOURCE AUDIO</span>
+      <hr className="label-rule" />
+
       {/* Drop Zone */}
       <div
         onDragOver={(e) => e.preventDefault()}
@@ -109,7 +112,7 @@ export default function AudioUpload({
             <Waveform currentTime={currentTime} duration={duration} onSeek={onSeek} />
           </div>
 
-          <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          <div className="mobile-audio-controls" style={{ display: "flex", gap: 8, alignItems: "center" }}>
             <button
               className={`btn ${isPlaying ? "btn-danger" : "btn-primary"}`}
               onClick={onTogglePlay}

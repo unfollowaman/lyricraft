@@ -13,12 +13,13 @@ export default function Panel({ label, badge, accent, children }) {
 
   return (
     <div
+      className="mobile-panel"
       style={{
         background: "#FDFCF9",
         border: "1.5px solid #D8D4CC",
         borderRadius: 14,
         boxShadow: "0 2px 6px rgba(0,0,0,0.05), 0 10px 28px rgba(0,0,0,0.07)",
-        marginBottom: 16,
+        marginBottom: 20,
         overflow: "hidden",
       }}
     >
@@ -54,7 +55,7 @@ export default function Panel({ label, badge, accent, children }) {
           </span>
         )}
       </div>
-      <div style={{ padding: "20px 20px 22px", position: "relative" }}>
+      <div className="mobile-panel-body" style={{ padding: "20px 20px 22px", position: "relative" }}>
         <div className="panel-content">{children}</div>
       </div>
     </div>

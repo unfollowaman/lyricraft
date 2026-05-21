@@ -9,12 +9,12 @@ import Panel from "./Panel.jsx";
 export default function LyricSync({ lyrics, duration, onComplete }) {
   return (
     <Panel label="03 // LYRIC SYNC" badge="AI-ASSISTED">
-      <p style={{ fontSize: 13, color: "#7A7670", marginBottom: 16, fontFamily: "'DM Sans', sans-serif" }}>
+      <span className="label-subheader">SYNC STATUS</span><hr className="label-rule" /><p style={{ fontSize: 13, color: "#7A7670", marginBottom: 16, fontFamily: "'DM Sans', sans-serif" }}>
         Lyrics are auto-synced to your audio. Click any line to preview and manually adjust timing.
       </p>
 
       {/* Stats strip */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 16 }}>
+      <div className="mobile-stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 16 }}>
         {[
           ["LINES",    lyrics.length],
           ["DURATION", `${duration.toFixed(0)}s`],
@@ -34,7 +34,8 @@ export default function LyricSync({ lyrics, duration, onComplete }) {
         ))}
       </div>
 
-      <div style={{ display: "flex", gap: 10, marginBottom: 14 }}>
+      <hr className="panel-divider" />
+      <div className="mobile-lyric-actions" style={{ display: "flex", gap: 10, marginBottom: 14 }}>
         <button className="btn btn-outline" style={{ flex: 1, height: 40, border: "1.5px solid #D8D4CC", borderRadius: 10, background: "#FDFCF9", color: "#1A1A1A", fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: 13, cursor: "pointer", transition: "all 0.15s ease" }}>↺ RE-SYNC</button>
         <button className="btn btn-outline" style={{ flex: 1, height: 40, border: "1.5px solid #D8D4CC", borderRadius: 10, background: "#FDFCF9", color: "#1A1A1A", fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: 13, cursor: "pointer", transition: "all 0.15s ease" }}>✎ MANUAL EDIT</button>
       </div>

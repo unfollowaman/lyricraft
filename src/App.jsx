@@ -117,24 +117,25 @@ export default function App() {
       {/* ── Hero Strip ── */}
       <div style={{
         background: "#FDFCF9",
-        borderBottom: "2px solid #1A1A1A",
         padding: "32px 24px 28px",
         textAlign: "left",
-      }}>
-        <div>
+      }} className="mobile-hero">
+        <div style={{ background: "#1A1A1A", borderRadius: 16, padding: "20px 24px" }} className="mobile-hero-block">
           <h1 style={{
-            fontFamily: "'Fraunces', serif",
+            fontFamily: "'Playfair Display', serif",
             letterSpacing: "-0.02em", lineHeight: 1, marginBottom: 8,
           }}>
-            <span style={{ display: "block", fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 900, fontStyle: "italic", color: "#1A1A1A" }}>CINEMATIC LYRIC</span>
-            <span style={{ display: "block", fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 900, fontStyle: "normal", color: "#7A7670" }}>MOTION GENERATOR</span>
+            <span className="mobile-hero-title" style={{ display: "block", fontSize: "clamp(36px, 7vw, 74px)", fontWeight: 900, fontStyle: "italic", color: "#F5F2EC" }}>CINEMATIC LYRIC</span>
+            <span className="mobile-hero-title" style={{ display: "block", fontSize: "clamp(36px, 7vw, 74px)", fontWeight: 900, fontStyle: "italic", color: "#9D9890" }}>MOTION GENERATOR</span>
           </h1>
-          <p style={{ fontSize: 12, color: "#A8A49E", marginTop: 10, fontWeight: 400, lineHeight: 1.5 }}>
+        </div>
+        <div style={{ height: 2, background: "#1A1A1A", opacity: 1, margin: "14px 0 10px" }} />
+        <div>
+          <p style={{ fontSize: 12, color: "#7A7670", marginTop: 10, fontWeight: 400, lineHeight: 1.5 }}>
             Browser-native. No upload limits. No watermarks.<br />
             Premium cinematic typography — exported locally.
           </p>
         </div>
-        <div style={{ height: 1.5, background: "#1A1A1A", opacity: 0.12, margin: "14px 0 10px" }} />
         <div style={{ display: "inline-flex", gap: 6, flexShrink: 0, flexWrap: "wrap", marginTop: 0 }}>
           {["MP4", "WEBM", "MOV", "GIF"].map((f) => (
             <span key={f} style={{ border: "1.5px solid #1A1A1A", borderRadius: 5, padding: "2px 8px", fontSize: 10, fontWeight: 500, fontFamily: "'DM Mono', monospace", letterSpacing: "0.06em", background: "transparent", color: "#1A1A1A" }}>{f}</span>
@@ -146,13 +147,13 @@ export default function App() {
       <StepIndicator steps={STEPS} current={step} />
 
       {/* ── Main Layout ── */}
-      <main style={{
+      <main className="mobile-main-layout" style={{
         maxWidth: 1200,
         margin: "0 auto",
         padding: "24px",
         display: "grid",
         gridTemplateColumns: "1fr 380px",
-        gap: 24,
+        gap: 20,
         alignItems: "start",
       }}>
         {/* Left — Workflow panels */}
