@@ -54,6 +54,18 @@ lyricraft/
 
 ---
 
+## Deploy to GitHub Pages
+
+This project uses Vite, so **GitHub Pages cannot serve the React source directly from the `main` branch root**. It must serve the built `dist` output.
+
+1. Push this repository to GitHub.
+2. In **Settings → Pages**, set **Source** to **GitHub Actions**.
+3. Keep pushing to `main`; the included workflow (`.github/workflows/deploy-pages.yml`) will build and deploy automatically.
+
+If your repo name changes, update `base` in `vite.config.js` to match `/<repo-name>/`.
+
+---
+
 ## Deploy to Vercel
 
 ```bash
