@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import Panel from "./Panel.jsx";
 import Waveform from "./Waveform.jsx";
-import { T } from "../styles/tokens.js";
+import { tokens } from "../styles/tokens.js";
 
 /**
  * AudioUpload
@@ -44,7 +44,7 @@ export default function AudioUpload({
     <Panel
       label="02 // AUDIO UPLOAD"
       badge={audioFile ? "LOADED" : "WAITING"}
-      accent={audioFile ? T.teal : "#A06A00"}
+      accent={audioFile ? tokens.color.success : "#A06A00"}
     >
       {/* Drop Zone */}
       <div

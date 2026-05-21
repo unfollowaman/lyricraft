@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Panel from "./Panel.jsx";
-import { T, EXPORT_FORMATS } from "../styles/tokens.js";
+import { tokens, EXPORT_FORMATS } from "../styles/tokens.js";
 
 export default function ExportPanel({ onNotify }) {
   const [selectedFormat, setSelectedFormat] = useState("MP4");
@@ -28,7 +28,7 @@ export default function ExportPanel({ onNotify }) {
     <Panel
       label="05 // EXPORT"
       badge={exported ? "READY" : "RENDER"}
-      accent={exported ? T.teal : T.yellow}
+      accent={exported ? tokens.color.success : tokens.color.textMuted}
     >
       {/* Format selector */}
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>

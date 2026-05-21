@@ -1,4 +1,4 @@
-import { T } from "../styles/tokens.js";
+import { tokens } from "../styles/tokens.js";
 
 /**
  * Toast
@@ -9,9 +9,11 @@ export default function Toast({ notification, onDismiss }) {
   if (!notification) return null;
 
   const accentColor =
-    notification.type === "success" ? T.teal
-    : notification.type === "warning" ? T.yellow
-    : T.magenta;
+    notification.type === "success"
+      ? tokens.color.success
+      : notification.type === "warning"
+        ? tokens.color.textMuted
+        : tokens.color.danger;
 
   return (
     <div style={{ position: "fixed", bottom: 24, right: 24, zIndex: 9999, display: "flex", flexDirection: "column", gap: 8 }}>
