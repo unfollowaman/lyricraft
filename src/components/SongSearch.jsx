@@ -37,7 +37,7 @@ export default function SongSearch({ onComplete, onNotify }) {
 
   return (
     <Panel label="01 // SONG SEARCH" badge="LYRICS ENGINE">
-      <p style={{ fontSize: 12, color: "#9B9B98", marginTop: 8, marginBottom: 16, fontFamily: "'DM Sans', sans-serif" }}>
+      <p style={{ fontSize: 12, color: "#A8A49E", marginTop: 8, marginBottom: 16, fontFamily: "'DM Sans', sans-serif" }}>
         Enter a song name to fetch lyrics automatically, or paste manually below.
       </p>
 
@@ -53,13 +53,13 @@ export default function SongSearch({ onComplete, onNotify }) {
             flex: 1,
             width: "100%",
             height: 44,
-            border: "1.5px solid #E0E0DC",
+            border: "1.5px solid #D8D4CC",
             borderRadius: 10,
             padding: "0 14px",
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 14,
             color: "#1A1A1A",
-            background: "#FAFAF8",
+            background: "#FAF8F4",
             outline: "none",
           }}
         />
@@ -72,7 +72,7 @@ export default function SongSearch({ onComplete, onNotify }) {
             height: 44,
             padding: "0 20px",
             background: "#1A1A1A",
-            color: "#FFFFFF",
+            color: "#FDFCF9",
             border: "none",
             borderRadius: 10,
             fontFamily: "'DM Sans', sans-serif",

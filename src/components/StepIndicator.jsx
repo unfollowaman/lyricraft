@@ -5,10 +5,10 @@
  */
 export default function StepIndicator({ steps, current }) {
   return (
-    <div style={{ background: "#FFFFFF", borderBottom: "1px solid #E8E8E4", padding: "0 24px", display: "flex", alignItems: "center", gap: 0, overflowX: "auto", scrollbarWidth: "none" }}>
+    <div style={{ background: "#F5F2EC", borderBottom: "2px solid #1A1A1A", padding: "0 20px", display: "flex", alignItems: "center", gap: 0, overflowX: "auto", scrollbarWidth: "none" }}>
       {steps.map((s, i) => (
         <div key={i} style={{ display: "flex", alignItems: "center" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "14px 16px", cursor: "pointer", borderBottom: i === current ? "2px solid #1A1A1A" : "2px solid transparent", transition: "all 0.15s ease", whiteSpace: "nowrap" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "14px 16px", marginBottom: i === current ? -2 : 0, cursor: "pointer", borderBottom: i === current ? "2px solid #1A1A1A" : "2px solid transparent", transition: "all 0.15s ease", whiteSpace: "nowrap" }}>
             <div
               aria-current={i === current ? "step" : undefined}
               style={{
@@ -22,8 +22,8 @@ export default function StepIndicator({ steps, current }) {
                 fontWeight: 700,
                 fontFamily: "'DM Mono', monospace",
                 background: i < current || i === current ? "#1A1A1A" : "#F0F0ED",
-                color: i < current || i === current ? "#FFFFFF" : "#9B9B98",
-                border: i < current || i === current ? "1.5px solid #1A1A1A" : "1.5px solid #E0E0DC",
+                color: i < current || i === current ? "#FDFCF9" : "#A8A49E",
+                border: i < current || i === current ? "1.5px solid #1A1A1A" : "1.5px solid #D8D4CC",
               }}
             >
               {i < current ? "✓" : i + 1}
@@ -31,9 +31,9 @@ export default function StepIndicator({ steps, current }) {
             <span
               style={{
                 fontSize: 12,
-                fontWeight: i === current ? 600 : 500,
+                fontWeight: i === current ? 700 : 500,
                 letterSpacing: "0.03em",
-                color: i < current ? "#6B6B68" : i === current ? "#1A1A1A" : "#9B9B98",
+                color: i < current ? "#7A7670" : i === current ? "#1A1A1A" : "#A8A49E",
                 fontFamily: "'DM Sans', sans-serif",
               }}
             >
@@ -44,9 +44,9 @@ export default function StepIndicator({ steps, current }) {
           {i < steps.length - 1 && (
             <div
               style={{
-                width: 24,
+                width: 20,
                 height: 1,
-                background: "#E0E0DC",
+                background: "#D8D4CC",
                 flexShrink: 0,
               }}
             />

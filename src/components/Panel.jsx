@@ -14,61 +14,39 @@ export default function Panel({ label, badge, accent, children }) {
   return (
     <div
       style={{
-        background: "#FFFFFF",
-        border: "1.5px solid #E0E0DC",
-        borderRadius: 16,
-        boxShadow: "0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08)",
-        padding: 24,
-        marginBottom: 20,
+        background: "#FDFCF9",
+        border: "1.5px solid #D8D4CC",
+        borderRadius: 14,
+        boxShadow: "0 2px 6px rgba(0,0,0,0.05), 0 10px 28px rgba(0,0,0,0.07)",
+        marginBottom: 16,
+        overflow: "hidden",
       }}
     >
       <div
         style={{
+          background: "#1A1A1A",
+          borderRadius: "13px 13px 0 0",
+          padding: "10px 20px",
           display: "flex",
           alignItems: "center",
-          gap: 12,
-          marginBottom: 20,
-          paddingBottom: 16,
-          borderBottom: "1px solid #F0F0ED",
+          justifyContent: "space-between",
         }}
       >
-        {stepNumber && (
-          <span
-            style={{
-              fontFamily: "'DM Mono', monospace",
-              fontSize: 11,
-              fontWeight: 500,
-              color: "#9B9B98",
-              letterSpacing: "0.06em",
-            }}
-          >
-            {stepNumber} //
-          </span>
-        )}
-        <span
-          style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontWeight: 700,
-            fontSize: 13,
-            letterSpacing: "0.04em",
-            color: "#1A1A1A",
-            textTransform: "uppercase",
-          }}
-        >
-          {stepTitle}
+        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, fontWeight: 500, color: "#FFFFFF", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+          {stepNumber ? `${stepNumber} // ${stepTitle}` : stepTitle}
         </span>
         {badge && (
           <span
             style={{
-              marginLeft: "auto",
+              background: "rgba(255,255,255,0.12)",
+              color: "#FFFFFF",
+              border: "1px solid rgba(255,255,255,0.2)",
               borderRadius: 999,
               padding: "3px 10px",
               fontSize: 10,
               fontWeight: 600,
-              letterSpacing: "0.05em",
-              background: "#F0F0ED",
-              color: "#3A3A38",
-              border: "1px solid #E0E0DC",
+              fontFamily: "'DM Mono', monospace",
+              letterSpacing: "0.06em",
               textTransform: "uppercase",
             }}
           >
@@ -76,7 +54,9 @@ export default function Panel({ label, badge, accent, children }) {
           </span>
         )}
       </div>
-      <div>{children}</div>
+      <div style={{ padding: "20px 20px 22px", position: "relative" }}>
+        <div className="panel-content">{children}</div>
+      </div>
     </div>
   );
 }

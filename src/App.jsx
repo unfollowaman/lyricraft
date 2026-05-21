@@ -75,7 +75,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ background: "#FAFAF8", minHeight: "100vh", fontFamily: "'DM Sans', sans-serif" }}>
+    <div style={{ background: "#F5F2EC", minHeight: "100vh", fontFamily: "'DM Sans', sans-serif" }}>
       {/* Hidden audio element */}
       {audioURL && (
         <audio
@@ -93,7 +93,7 @@ export default function App() {
 
       {/* ── Top Navigation ── */}
       <header style={{
-        background: "#FFFFFF",
+        background: "#FDFCF9",
         borderBottom: "1px solid #E8E8E4",
         padding: "0 24px", height: 52,
         display: "flex", alignItems: "center", justifyContent: "space-between",
@@ -104,39 +104,40 @@ export default function App() {
             LYRICRAFT
           </span>
           <span style={{
-            background: "#1A1A1A", color: "#FFFFFF",
+            background: "#1A1A1A", color: "#FDFCF9",
             borderRadius: 4, padding: "2px 6px", fontSize: 9, fontWeight: 700, letterSpacing: "0.08em",
           }}>BETA</span>
         </div>
         <nav style={{ display: "flex", gap: 8 }}>
-          <a href="#" style={{ fontSize: 12, fontWeight: 500, color: "#6B6B68", border: "1px solid #E0E0DC", borderRadius: 8, padding: "4px 12px", textDecoration: "none" }}>DOCS</a>
-          <a href="#" style={{ fontSize: 12, fontWeight: 500, color: "#6B6B68", border: "1px solid #E0E0DC", borderRadius: 8, padding: "4px 12px", textDecoration: "none" }}>GITHUB</a>
+          <a href="#" style={{ fontSize: 12, fontWeight: 500, color: "#7A7670", border: "1px solid #D8D4CC", borderRadius: 8, padding: "4px 12px", textDecoration: "none" }}>DOCS</a>
+          <a href="#" style={{ fontSize: 12, fontWeight: 500, color: "#7A7670", border: "1px solid #D8D4CC", borderRadius: 8, padding: "4px 12px", textDecoration: "none" }}>GITHUB</a>
         </nav>
       </header>
 
       {/* ── Hero Strip ── */}
       <div style={{
-        background: "#FFFFFF",
-        borderBottom: "1px solid #E8E8E4",
-        padding: "40px 24px 32px",
+        background: "#FDFCF9",
+        borderBottom: "2px solid #1A1A1A",
+        padding: "32px 24px 28px",
         textAlign: "left",
       }}>
         <div>
           <h1 style={{
-            fontFamily: "'DM Sans', sans-serif",
-            letterSpacing: "-0.02em", lineHeight: 1.1, marginBottom: 8,
+            fontFamily: "'Fraunces', serif",
+            letterSpacing: "-0.02em", lineHeight: 1, marginBottom: 8,
           }}>
-            <span style={{ display: "block", fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 800, color: "#1A1A1A" }}>CINEMATIC LYRIC</span>
-            <span style={{ display: "block", fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 800, color: "#6B6B68" }}>MOTION GENERATOR</span>
+            <span style={{ display: "block", fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 900, fontStyle: "italic", color: "#1A1A1A" }}>CINEMATIC LYRIC</span>
+            <span style={{ display: "block", fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 900, fontStyle: "normal", color: "#7A7670" }}>MOTION GENERATOR</span>
           </h1>
-          <p style={{ fontSize: 13, color: "#9B9B98", marginTop: 8, fontWeight: 400 }}>
+          <p style={{ fontSize: 12, color: "#A8A49E", marginTop: 10, fontWeight: 400, lineHeight: 1.5 }}>
             Browser-native. No upload limits. No watermarks.<br />
             Premium cinematic typography — exported locally.
           </p>
         </div>
-        <div style={{ display: "inline-flex", gap: 6, flexShrink: 0, flexWrap: "wrap", marginTop: 16 }}>
+        <div style={{ height: 1.5, background: "#1A1A1A", opacity: 0.12, margin: "14px 0 10px" }} />
+        <div style={{ display: "inline-flex", gap: 6, flexShrink: 0, flexWrap: "wrap", marginTop: 0 }}>
           {["MP4", "WEBM", "MOV", "GIF"].map((f) => (
-            <span key={f} style={{ border: "1.5px solid #2C2C2C", borderRadius: 6, padding: "3px 8px", fontSize: 11, fontWeight: 600, fontFamily: "'DM Mono', monospace", background: "transparent", color: "#1A1A1A" }}>{f}</span>
+            <span key={f} style={{ border: "1.5px solid #1A1A1A", borderRadius: 5, padding: "2px 8px", fontSize: 10, fontWeight: 500, fontFamily: "'DM Mono', monospace", letterSpacing: "0.06em", background: "transparent", color: "#1A1A1A" }}>{f}</span>
           ))}
         </div>
       </div>
@@ -200,7 +201,7 @@ export default function App() {
       {/* ── Footer ── */}
       <footer style={{
         borderTop: "1px solid #E8E8E4",
-        background: "#FFFFFF", color: "#9B9B98",
+        background: "#FDFCF9", color: "#A8A49E",
         padding: "20px 24px",
         display: "flex", justifyContent: "space-between", alignItems: "center",
         fontSize: 11, marginTop: 24, flexWrap: "wrap", gap: 8,

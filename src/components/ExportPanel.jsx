@@ -37,7 +37,7 @@ export default function ExportPanel({ onNotify }) {
             key={f}
             className={`btn ${selectedFormat === f ? "btn-primary" : "btn-outline"}`}
             onClick={() => setSelectedFormat(f)}
-            style={{ height: 36, padding: "0 16px", border: "1.5px solid #E0E0DC", borderRadius: 8, background: selectedFormat === f ? "#1A1A1A" : "#FFFFFF", fontFamily: "'DM Mono', monospace", fontSize: 12, fontWeight: 600, color: selectedFormat === f ? "#FFFFFF" : "#6B6B68", cursor: "pointer", transition: "all 0.15s ease" }}
+            style={{ height: 36, padding: "0 16px", border: "1.5px solid #D8D4CC", borderRadius: 8, background: selectedFormat === f ? "#1A1A1A" : "#FDFCF9", fontFamily: "'DM Mono', monospace", fontSize: 12, fontWeight: 600, color: selectedFormat === f ? "#FDFCF9" : "#7A7670", cursor: "pointer", transition: "all 0.15s ease" }}
           >
             {f}
           </button>
@@ -46,9 +46,9 @@ export default function ExportPanel({ onNotify }) {
 
       {/* Progress */}
       {(exporting || exported) && (
-        <div style={{ background: "#FAFAF8", border: "1.5px solid #E8E8E4", borderRadius: 12, padding: 20, textAlign: "center", marginBottom: 16 }}>
+        <div style={{ background: "#FAF8F4", border: "1.5px solid #E8E8E4", borderRadius: 12, padding: 20, textAlign: "center", marginBottom: 16 }}>
           <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, fontFamily: "'Vidaloka', serif", marginBottom: 8 }}>
-            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 12, color: "#9B9B98" }}>{exporting ? `RENDERING FRAMES — ${exportProgress}%` : "EXPORT READY"}</span>
+            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 12, color: "#A8A49E" }}>{exporting ? `RENDERING FRAMES — ${exportProgress}%` : "EXPORT READY"}</span>
           </div>
           {exporting && (
             <div className="progress-bar">
@@ -76,7 +76,7 @@ export default function ExportPanel({ onNotify }) {
       <button
         className={`btn btn-yellow ${exporting ? "btn-disabled" : ""}`}
         onClick={handleExport}
-        style={{ width: "100%", height: 48, background: "#1A1A1A", color: "#FFFFFF", border: "none", borderRadius: 12, fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.02em", cursor: "pointer", transition: "all 0.15s ease" }}
+        style={{ width: "100%", height: 48, background: "#1A1A1A", color: "#FDFCF9", border: "none", borderRadius: 12, fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.02em", cursor: "pointer", transition: "all 0.15s ease" }}
       >
         {exporting ? `RENDERING ${exportProgress}%...` : exported ? "↓ RE-EXPORT" : "▶ START RENDER"}
       </button>
