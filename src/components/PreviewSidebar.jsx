@@ -2,7 +2,7 @@ import CRTPreview from "./CRTPreview.jsx";
 
 export default function PreviewSidebar({ lyrics, currentLine, isPlaying, onLineChange, onTogglePlay }) {
   return (
-    <div style={{ background: "#FFFFFF", border: "1.5px solid #E0E0DC", borderRadius: 16, boxShadow: "0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08)", overflow: "hidden", position: "sticky", top: 72 }}>
+    <div className="mobile-preview-sidebar" style={{ background: "#FDFCF9", border: "1.5px solid #E0E0DC", borderRadius: 16, boxShadow: "0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08)", overflow: "hidden", position: "sticky", top: 72 }}>
       <div style={{ padding: "14px 18px", borderBottom: "1px solid #F0F0ED", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, fontWeight: 500, letterSpacing: "0.1em", color: "#9B9B98", textTransform: "uppercase" }}>LIVE PREVIEW</span>
         <span style={{ fontSize: 10, fontWeight: 600, color: "#9B9B98", fontFamily: "'DM Mono', monospace" }}>{isPlaying ? "● PLAYING" : "● PAUSED"}</span>
@@ -21,8 +21,8 @@ export default function PreviewSidebar({ lyrics, currentLine, isPlaying, onLineC
         )}
       </div>
 
-      <div style={{ padding: "12px 18px", borderTop: "1px solid #F0F0ED", display: "flex", alignItems: "center", gap: 8 }}>
-        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, color: "#9B9B98", marginRight: "auto" }}>
+      <div className="mobile-preview-meta" style={{ padding: "12px 18px", borderTop: "1px solid #F0F0ED", display: "flex", alignItems: "center", gap: 8 }}>
+        <span className="mobile-preview-meta-label" style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, color: "#9B9B98", marginRight: "auto" }}>
           CRT MONO · 9:16 · 30FPS
         </span>
         <div style={{ display: "flex", gap: 6 }}>
@@ -35,7 +35,7 @@ export default function PreviewSidebar({ lyrics, currentLine, isPlaying, onLineC
               key={label}
               onClick={action}
               aria-label={label}
-              style={{ width: 32, height: 32, borderRadius: 8, border: "1.5px solid #E0E0DC", background: "#FAFAF8", color: "#1A1A1A", fontSize: 11, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+              className="mobile-preview-btn" style={{ width: 32, height: 32, borderRadius: 8, border: "1.5px solid #E0E0DC", background: "#FAFAF8", color: "#1A1A1A", fontSize: 11, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
             >
               {icon}
             </button>

@@ -5,7 +5,7 @@
  */
 export default function StepIndicator({ steps, current }) {
   return (
-    <div style={{ background: "#F5F2EC", borderBottom: "2px solid #1A1A1A", padding: "0 20px", display: "flex", alignItems: "center", gap: 0, overflowX: "auto", scrollbarWidth: "none" }}>
+    <div className="mobile-step-indicator" style={{ background: "#F5F2EC", borderBottom: "2px solid #1A1A1A", padding: "0 20px", display: "flex", alignItems: "center", gap: 0, overflowX: "auto", scrollbarWidth: "none", flexWrap: "nowrap" }}>
       {steps.map((s, i) => (
         <div key={i} style={{ display: "flex", alignItems: "center" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "14px 16px", marginBottom: i === current ? -2 : 0, cursor: "pointer", borderBottom: i === current ? "2px solid #1A1A1A" : "2px solid transparent", transition: "all 0.15s ease", whiteSpace: "nowrap" }}>
